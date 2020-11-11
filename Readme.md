@@ -1,7 +1,7 @@
 # Личный проект «Пинк» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Андрей Андреев](https://up.htmlacademy.ru/adaptive/21/user/1388477).
-* Наставник: `Неизвестно`.
+* Наставник: [Сергей Остаповец](https://up.htmlacademy.ru/adaptive/21/user/288419).
 
 ---
 
