@@ -1,0 +1,37 @@
+.range-control {
+  border-bottom: 1px solid rgba($color: $blue_grey, $alpha: 0.1);
+  padding-bottom: 34px;
+  padding-top: 36px;
+  display: flex;
+  justify-content: center;
+}
+
+.range-control__bar {
+  width: 240px;
+  height: 2px;
+  background-color: $blue_grey;
+  position: relative;
+}
+
+.range-control__toggle {
+  width: 14px;
+  height: 14px;
+  background-color: $basic_white;
+  border: 2px solid $basic_pink;
+  border-radius: 50%;
+  position: absolute;
+  top: -6px;
+}
+
+
+.range-control--crop .range-control__toggle {
+  right: 40px;
+}
+
+.range-control--fill .range-control__toggle {
+  right: 200px;
+}
+
+.range-control--contrast .range-control__toggle {
+  right: 115px;
+}

@@ -1,0 +1,34 @@
+.gallery__wrapper {
+  @include wrapper;
+}
+
+.gallery__title-block {
+  background-color: $blue_grey;
+  background-image: url("../img/back-mobile.png");
+  background-repeat: no-repeat;
+  margin: 0 -20px;
+  padding: 0 20px;
+  padding-top: 36px;
+  padding-bottom: 84px;
+}
+
+.gallery__title {
+  margin: 0;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 32px;
+  color: $basic_white;
+  text-align: center;
+}
+
+.gallery__intro-text {
+  margin: 0;
+  font-size: 14px;
+  line-height: 30px;
+  text-align: center;
+  color: $blue_grey;
+}
+
+.gallery__photo + .gallery__photo {
+  padding-top: 20px;
+}
