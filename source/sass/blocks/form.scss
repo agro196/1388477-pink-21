@@ -1,0 +1,64 @@
+.form {
+  padding: 0 2px;
+}
+
+.form__wrapper {
+  @include wrapper;
+}
+
+.form__fieldset-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.form__fieldset-item + .form__fieldset-item {
+  margin-top: 13px;
+}
+
+.form__fieldset--achievements {
+  background-color: $basic_grey;
+  margin: 0 -20px;
+  padding: 0 20px;
+  padding-top: 44px;
+  padding-bottom: 42px;
+}
+
+.form__fieldset--app {
+  background-color: $basic_grey;
+  margin: 0 -20px;
+  padding: 0 20px;
+  padding-top: 42px;
+  padding-bottom: 42px;
+}
+
+.form__fieldset-title {
+  text-align: center;
+  margin: 0;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: $basic_pink;
+}
+
+.form__small-text {
+  margin-top: 45px;
+  text-transform: uppercase;
+  display: block;
+  font-size: 14px;
+  line-height: 30px;
+  color: $blue_grey;
+  text-align: center;
+}
+
+.form__submit-button {
+  @include submit-button;
+  margin-top: 52px;
+  padding-left: 45px;
+  padding-right: 45px;
+}
+
+.form__notice {
+  color: $basic_pink;
+}

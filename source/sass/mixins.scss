@@ -1,0 +1,36 @@
+@mixin wrapper {
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @media (min-width: $desktop-width) {
+    padding-left: 10px;
+    padding-right: 10px;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+}
+
+@mixin button {
+  border: 3px solid;
+  border-radius: 29px;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 700;
+  display: block;
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 16px;
+}
+
+@mixin submit-button {
+  border: none;
+  font-weight: 700;
+  padding-top: 15px;
+  padding-bottom: 14px;
+  font-family: "Open Sans", "Arial", sans-serif;
+  background-color: $dark_green;
+  text-transform: uppercase;
+  font-size: 18px;
+  line-height: 30px;
+  color: $basic_white;
+}

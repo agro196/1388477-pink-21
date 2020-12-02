@@ -1,0 +1,27 @@
+.contest__wrapper {
+  @include wrapper;
+}
+
+.contest__title-block {
+  background-color: $blue_grey;
+  background-image: url("../img/back-mobile.png");
+  background-repeat: no-repeat;
+  margin: 0 -20px;
+  padding: 0 20px;
+}
+
+.contest__title {
+  margin: 0;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 32px;
+  color: $basic_white;
+  text-align: center;
+}
+
+.contest__intro-text {
+  font-size: 14px;
+  line-height: 30px;
+  text-align: center;
+  color: $blue_grey;
+}

@@ -1,0 +1,44 @@
+.upload-form {
+  background-color: $basic_grey;
+}
+
+.upload-form__wrapper {
+  @include wrapper;
+}
+
+.upload-form__fieldset-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.upload-form__filter-controls {
+  margin-top: 43px;
+}
+
+.upload-form__button-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.upload-form__submit-button {
+  @include button;
+  margin-top: 28px;
+  max-width: 280px;
+  padding-left: 15px;
+  padding-right: 15px;
+  color: $basic_pink;
+  border: 3px solid;
+  border-color: $basic_pink;
+}
+
+.upload-form__abandon-button {
+  @include button;
+  margin-top: 28px;
+  max-width: 280px;
+  padding-left: 15px;
+  padding-right: 15px;
+  color: rgba($color: $blue_grey, $alpha: 0.1);
+  border: 3px solid;
+  border-color: rgba($color: $blue_grey, $alpha: 0.1);
+}

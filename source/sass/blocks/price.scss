@@ -1,0 +1,13 @@
+.price {
+  background-image: url("../img/grey-background.svg");
+  background-repeat: no-repeat;
+  background-size: 8000px 1000px;
+  background-position: 50% 100px;
+}
+
+.price__wrapper {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
