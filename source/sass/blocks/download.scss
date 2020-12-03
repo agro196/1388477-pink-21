@@ -2,6 +2,7 @@
   background-color: $blue_grey;
   background-image: url("../img/back-mobile.png");
   background-repeat: no-repeat;
+  background-size: 100% 462px;
 }
 
 .download__wrapper {
@@ -34,6 +35,39 @@
   color: $basic_white;
   border: 3px solid;
   border-color: $basic_white;
+}
+
+.download__link--apple {
+  &::after {
+    content: "";
+    width: 47px;
+    height: 56px;
+    background-image: url("../img/icon-apple.svg");
+    background-repeat: no-repeat;
+    display: block;
+  }
+}
+
+.download__link--android {
+  &::after {
+    content: "";
+    width: 43px;
+    height: 47px;
+    background-image: url("../img/icon-android.svg");
+    background-repeat: no-repeat;
+    display: block;
+  }
+}
+
+.download__link--microsoft {
+  &::after {
+    content: "";
+    width: 44px;
+    height: 41px;
+    background-image: url("../img/icon-microsoft.svg");
+    background-repeat: no-repeat;
+    display: block;
+  }
 }
 
 .download__text {
