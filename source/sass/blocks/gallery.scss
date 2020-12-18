@@ -2,14 +2,51 @@
   @include wrapper;
 }
 
+.gallery__layout {
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 20px;
+    column-gap: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 54px;
+  }
+}
+
 .gallery__title-block {
   background-color: $blue_grey;
   background-image: url("../img/back-mobile.png");
   background-repeat: no-repeat;
-  margin: 0 -20px;
-  padding: 0 20px;
   padding-top: 36px;
   padding-bottom: 84px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/back-mobile@2x.png");
+  }
+
+  @media (min-width: $tablet-width) {
+    background-image: url("../img/back-tablet.png");
+    background-size: 1200px 729px;
+    background-position: 50% 0%;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/back-tablet@2x.png");
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    background-image: url("../img/back-desktop.png");
+    background-size: 2560px 853px;
+    background-position: 50% 0%;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/back-desktop@2x.png");
+    }
+  }
 }
 
 .gallery__title {
@@ -27,8 +64,4 @@
   line-height: 30px;
   text-align: center;
   color: $blue_grey;
-}
-
-.gallery__photo + .gallery__photo {
-  padding-top: 20px;
 }

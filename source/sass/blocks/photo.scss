@@ -1,13 +1,35 @@
 .photo {
   margin: 0;
   padding: 0;
+  padding-top: 20px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 0;
+  }
+}
+
+.photo--panorama {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .photo img {
   display: block;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    width: 300px;
+  }
 }
 
-.photo--panorama {
+.photo--panorama img {
+  width: 100%;
+}
+
+.photo--panorama .photo__link {
+  display: block;
+  position: relative;
+
   &::before {
     content: "Панорама дня";
     display: flex;
@@ -26,21 +48,18 @@
   }
 }
 
-.photo--panorama img {
-  width: 100%;
-}
-
-.photo--panorama .photo__link {
-  display: block;
-  margin: 0 -20px;
-}
-
 .photo__caption {
   background-color: $basic_grey;
   padding-left: 17px;
   padding-right: 31px;
   padding-bottom: 25px;
   padding-top: 25px;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $tablet-width) {
+    min-height: 155px;
+  }
 }
 
 .photo__author {
@@ -54,6 +73,11 @@
   font-size: 14px;
   line-height: 24px;
   color: $blue_grey;
+}
+
+.photo__likes {
+  margin: 0;
+  margin-top: auto;
 }
 
 .photo__author-name {

@@ -1,6 +1,46 @@
 .text-field {
   display: flex;
   flex-direction: column;
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.text-field--contacts {
+  @media (min-width: $tablet-width) {
+    flex-direction: column;
+    align-items: flex-start;
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 59px;
+      height: 59px;
+      background-color: $light_grey;
+      top: 0;
+      right: 0;
+    }
+  }
+}
+
+.text-field--tel {
+  &::after {
+    background-image: url("../../img/icon-phone.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+}
+
+.text-field--mail {
+  &::after {
+    background-image: url("../../img/icon-mail.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
 }
 
 .text-field__label {
@@ -8,6 +48,18 @@
   line-height: 30px;
   color: $basic_pink;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    flex-shrink: 0;
+    margin-right: 20px;
+  }
+}
+
+.text-field__label--contacts {
+  @media (min-width: $tablet-width) {
+    order: 2;
+    margin-top: 19px;
+  }
 }
 
 .text-field__input {
@@ -18,12 +70,18 @@
   border-radius: 1px;
   padding-left: 20px;
   padding-right: 20px;
-  padding-top: 14px;
-  padding-bottom: 15px;
+  padding-top: 13px;
+  padding-bottom: 12px;
   width: 100%;
 
   &::placeholder {
     color: $blue_grey;
+  }
+}
+
+.text-field__input--contacts {
+  @media (min-width: $tablet-width) {
+    order: 1;
   }
 }
 

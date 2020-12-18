@@ -2,6 +2,12 @@
   margin: 0;
   padding: 0;
   list-style-type: none;
+  background-color: $blue_grey;
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    background-color: transparent;
+  }
 }
 
 .site-list__item {
@@ -10,6 +16,11 @@
   padding-bottom: 14px;
   border-top: 1px solid rgba(255, 255, 255, 0.15);
   border-bottom: 1px solid $basic_black;
+
+  @media (min-width: $desktop-width) {
+    border-bottom: none;
+    margin-left: 79px;
+  }
 }
 
 .site-list__link {
@@ -18,4 +29,9 @@
   color: $basic_white;
   text-transform: uppercase;
   font-weight: 700;
+
+  @media (min-width: $desktop-width) {
+    text-transform: none;
+    font-weight: 400;
+  }
 }

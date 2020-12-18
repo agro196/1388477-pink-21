@@ -1,5 +1,8 @@
 .price-list {
   border-collapse: collapse;
+}
+
+.price-list tbody {
   border: 2px solid $light_grey;
 }
 
@@ -16,6 +19,13 @@
 .price-list__rate--hit {
   border-right: 2px solid $basic_white;
   border-left: 2px solid $basic_white;
+  position: relative;
+}
+
+.price-list__hit-flag {
+  position: absolute;
+  top: 0;
+  left: -2px;
 }
 
 .price-list__tariff {
@@ -28,6 +38,7 @@
 }
 
 .price-list__availability {
+  position: relative;
   padding-left: 20px;
   padding-top: 25px;
   padding-bottom: 25px;
@@ -37,29 +48,70 @@
   border-right: 2px solid $light_grey;
   border-bottom: 2px solid $light_grey;
   min-width: 280px;
+  color: $blue_grey;
+
+  @media (min-width: $tablet-width) {
+    min-width: 152px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 234px;
+  }
 }
 
-.price__toggles {
-  text-align: center;
+.price-list__rate--empty {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: table-cell;
+    background-color: transparent;
+  }
 }
 
-.price__toggle {
-  border: 0;
-  background-color: transparentize($blue_grey, 0.7);
-  border-radius: 50%;
-  width: 6px;
-  height: 6px;
-  box-sizing: border-box;
-  padding: 0;
+.price-list__availability--empty {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: table-cell;
+    font-weight: 400;
+    text-transform: none;
+  }
 }
 
-.price__toggle--current {
-  border: 0;
-  background-color: $basic_white;
-  border-radius: 50%;
-  width: 6px;
-  height: 6px;
-  box-sizing: border-box;
-  padding: 0;
-  box-shadow: 0 0 0 3px $blue_grey;
+.price-list__availability--yes {
+  &::after {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 10px;
+    border-left: 2px solid $light_green;
+    border-bottom: 2px solid $light_green;
+    transform: skewY(-5deg) rotate(-45deg);
+    top: 40px;
+    right: 0;
+  }
+}
+
+.price-list__availability--no {
+  &::after {
+    content: "";
+    position: absolute;
+    width: 27px;
+    height: 2px;
+    background-color: $orange_red;
+    transform: rotate(-45deg);
+    top: 40px;
+    right: 0;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 27px;
+    height: 2px;
+    background-color: $orange_red;
+    transform: rotate(45deg);
+    top: 40px;
+    right: 0;
+  }
 }

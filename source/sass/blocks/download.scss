@@ -3,38 +3,130 @@
   background-image: url("../img/back-mobile.png");
   background-repeat: no-repeat;
   background-size: 100% 462px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/back-mobile@2x.png");
+  }
+
+  @media (min-width: $tablet-width) {
+    background-image: url("../img/back-tablet.png");
+    background-size: 1200px 729px;
+    background-position: 50% 0%;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/back-tablet@2x.png");
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    background-image: url("../img/back-desktop.png");
+    background-size: 2560px 853px;
+    background-position: 50% 0%;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/back-desktop@2x.png");
+    }
+  }
 }
 
 .download__wrapper {
   @include wrapper;
+  max-width: 320px;
+  margin: 0 auto;
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    max-width: 660px;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    overflow: hidden;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 960px;
+  }
 }
 
 .download__title {
   margin: 0;
   margin-bottom: 34px;
-  padding-top: 29px;
+  padding-top: 84px;
   font-size: 24px;
   line-height: 29px;
   color: $basic_white;
   font-weight: 300;
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    font-size: 40px;
+    line-height: 48px;
+    max-width: 266px;
+    padding-left: 27px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 50px;
+    line-height: 68px;
+  }
 }
 
 .download__img {
   display: block;
   margin: 0 -20px;
   min-width: 320px;
+
+  @media (min-width: $tablet-width) {
+    width: 660px;
+    height: 545px;
+    position: absolute;
+    z-index: -1;
+    right: -100px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1050px;
+    height: 645px;
+  }
 }
 
 .download__button {
   @include button;
-  margin-top: 28px;
-  max-width: 280px;
+  width: 100%;
+  max-width: 300px;
   padding-left: 15px;
   padding-right: 15px;
   color: $basic_white;
   border: 3px solid;
   border-color: $basic_white;
+}
+
+.download__link-block {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-top: 28px;
+  padding-bottom: 38px;
+
+  @media (min-width: $tablet-width) {
+    max-width: 300px;
+  }
+}
+
+.download__list {
+  margin: 0;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.download__item:not(:last-child) {
+  margin-right: 35px;
 }
 
 .download__link--apple {
@@ -77,4 +169,8 @@
   font-weight: 300;
   text-align: center;
   color: $basic_white;
+
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+  }
 }

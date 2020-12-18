@@ -9,4 +9,8 @@
   font-size: 14px;
   line-height: 18px;
   color: $blue_grey;
+
+  @media (min-width: $desktop-width) {
+    font-size: 18px;
+  }
 }
