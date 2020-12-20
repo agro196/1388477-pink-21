@@ -1,8 +1,48 @@
 .page-header {
-  background-color: $blue_grey;
+  @media (min-width: $desktop-width) {
+    background-color: rgba($color: $basic_black, $alpha: 0.3);
+  }
+}
+
+.page-header__wrapper {
+  @media (min-width: $desktop-width) {
+    @include wrapper;
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .page-header__logo-block {
   border-bottom: 1px solid $basic_black;
+  background-color: $blue_grey;
   padding: 21px 20px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 33px;
+    padding-bottom: 33px;
+  }
+
+  @media (min-width: $desktop-width) {
+    border-bottom: none;
+    background-color: transparent;
+  }
+}
+
+.page-header__logo-block--transparent {
+  border-bottom: none;
+  background-color: rgba($color: $basic_black, $alpha: 0.3);
+  padding: 20px 20px;
+
+  @media (min-width: $desktop-width) {
+    width: 147px;
+    height: 40px;
+    background-color: transparent;
+  }
+}
+
+.page-header__logo img {
+  @media (min-width: $tablet-width) {
+    width: 145px;
+    height: 40px;
+  }
 }

@@ -1,9 +1,55 @@
 .range-control {
   border-bottom: 1px solid rgba($color: $blue_grey, $alpha: 0.1);
   padding-bottom: 34px;
-  padding-top: 36px;
   display: flex;
   justify-content: center;
+  position: relative;
+}
+
+.range-control__icon {
+  @media (max-width: $mobile-width-only) {
+    display: none;
+  }
+  position: absolute;
+  top: -10px;
+  left: 0;
+}
+
+.range-control__icon--crop {
+  @media (min-width: $desktop-width) {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+.range-control__icon--fill path {
+  fill: $basic_pink;
+}
+
+.range-control__icon--fill {
+  @media (min-width: $desktop-width) {
+    width: 48px;
+    height: 43px;
+  }
+}
+
+.range-control__icon--fill g {
+  opacity: 1;
+}
+
+.range-control__icon--contrast {
+  @media (min-width: $desktop-width) {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+.range-control__icon--contrast path {
+  fill: $basic_pink;
+}
+
+.range-control__icon--contrast g {
+  opacity: 1;
 }
 
 .range-control__bar {
@@ -11,6 +57,14 @@
   height: 2px;
   background-color: $blue_grey;
   position: relative;
+
+  @media (min-width: $tablet-width) {
+    width: 202px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 288px;
+  }
 }
 
 .range-control__toggle {
@@ -23,9 +77,17 @@
   top: -6px;
 }
 
-
 .range-control--crop .range-control__toggle {
   right: 40px;
+}
+
+.range-control--fill,
+.range-control--contrast {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+  }
 }
 
 .range-control--fill .range-control__toggle {

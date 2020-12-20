@@ -1,22 +1,28 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML Academy: Пинк</title>
   <link href="css/style.css" rel="stylesheet">
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=488254ed-82fc-4395-ae88-fe5de35b2462&lang=ru_RU" type="text/javascript">
+  </script>
 </head>
 
 <body class="page__body">
-  <header class="page-header ">
+  <header class="page__page-header page-header">
     <div class="page-header__wrapper">
       <div class="page-header__logo-block">
         <a class="page-header__logo">
-          <img src="img/logo-mobile.svg" width="74" height="23" alt="Логотип сайта">
+          <picture>
+            <source media="(min-width: 960px)" srcset="img/logo-desktop.svg">
+            <source media="(min-width: 660px)" srcset="img/logo-tablet.svg">
+            <img src="img/logo-mobile.svg" width="74" height="23" alt="Логотип сайта">
+          </picture>
         </a>
       </div>
-      <nav class="page-header__main-nav main-nav main-nav--closed main-nav--nojs">
+      <nav class="page-header__main-nav main-nav main-nav--opened main-nav--nojs">
         <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
@@ -42,12 +48,33 @@
     <section class="download">
       <div class="download__wrapper">
         <h2 class="download__title">Взгляните на жизнь иначе!</h2>
-        <img class="download__img" src="img/phone-mobile.png" width="320" height="286" alt="Промо изображение">
-        <a href="#" class="download__button" href="#">Скачать приложение</a>
-        <a href="#" class="download__link download__link--apple" href=""></a>
-        <a href="#" class="download__link download__link--android" href=""></a>
-        <a href="#" class="download__link download__link--windows" href=""></a>
-        <p class="download__text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+        <picture>
+          <source media="(min-width: 960px)" srcset="img/phone-desktop.png 1x, img/phone-desktop@2x.png 2x">
+          <source media="(min-width: 660px)" srcset="img/phone-tablet.png 1x, img/phone-tablet@2x.png 2x">
+          <img class="download__img" src="img/phone-mobile.png" srcset="img/phone-mobile@2x.png 2x" width="320"
+            height="286" alt="Промо изображение">
+        </picture>
+        <div class="download__link-block">
+          <a href="https://www.apple.com/ru/app-store/" class="download__button" href="#">Скачать приложение</a>
+          <ul class="download__list">
+            <li class="download__item">
+              <a href="https://www.apple.com/ru/app-store/" class="download__link download__link--apple">
+                <span class="visually-hidden">Скачать приложение для apple</span>
+              </a>
+            </li>
+            <li class="download__item">
+              <a href="https://play.google.com/store/apps" class="download__link download__link--android">
+                <span class="visually-hidden">Скачать приложение для android</span>
+              </a>
+            </li>
+            <li class="download__item">
+              <a href="https://www.microsoft.com/ru-RU/store/apps" class="download__link download__link--microsoft">
+                <span class="visually-hidden">Скачать приложение для microsoft</span>
+              </a>
+            </li>
+          </ul>
+          <p class="download__text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+        </div>
       </div>
     </section>
     <section class="advantages">
@@ -65,7 +92,7 @@
           <li class="advantages__item advantages__item--change">
             <h3 class="advantages__item-title">Меняет мир вокруг</h3>
             <p class="advantages__description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы
-              усилить эффект</p>
+              усилить&nbsp;эффект</p>
           </li>
           <li class="advantages__item advantages__item--friends">
             <h3 class="advantages__item-title">Заводит новых друзей</h3>
@@ -110,6 +137,8 @@
               А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
             </p>
           </blockquote>
+          <button class="slider__prev" type="button"><span class="visually-hidden">Предыдущий отзыв</span></button>
+          <button class="slider__next" type="button"><span class="visually-hidden">Следующий отзыв</span></button>
         </div>
         <div class="slider__toggles">
           <button class="slider__toggle slider__toggle--current" type="button"><span
@@ -120,7 +149,8 @@
     </section>
     <section class="price">
       <div class="price__wrapper">
-          <table class="price__table price-list">
+        <table class="price__table price-list">
+          <thead>
             <tr class="price-list__row">
               <th class="price-list__rate price-list__rate--empty"></th>
               <th class="price-list__rate">
@@ -128,6 +158,7 @@
                 <span class="price-list__price">1.99 usd</span>
               </th>
               <th class="price-list__rate price-list__rate--hit">
+                <img class="price-list__hit-flag" src="img/hit-flag.svg" width="74" height="74">
                 <span class="price-list__tariff">Стандарт</span>
                 <span class="price-list__price">3.99 usd</span>
               </th>
@@ -136,31 +167,34 @@
                 <span class="price-list__price">9.99 usd</span>
               </th>
             </tr>
+          </thead>
+          <tbody>
             <tr class="price-list__row">
-              <th class="price-list__content-type price-list__content-type--empty"></th>
+              <th class="price-list__availability price-list__availability--empty">Розовый фильтр</th>
               <td class="price-list__availability price-list__availability--yes">Розовый фильтр</td>
+              <td class="price-list__availability price-list__availability--yes">Розовый фильтр</td>
+              <td class="price-list__availability price-list__availability--yes">Розовый фильтр</td>
+            </tr>
+            <tr class="price-list__row">
+              <th class="price-list__availability price-list__availability--empty">Смайлики</th>
               <td class="price-list__availability price-list__availability--no">Смайлики</td>
-              <td class="price-list__availability price-list__availability--no">Комментарии</td>
+              <td class="price-list__availability price-list__availability--yes">Смайлики</td>
+              <td class="price-list__availability price-list__availability--yes">Смайлики</td>
             </tr>
             <tr class="price-list__row">
-              <th class="price-list__content-type price-list__content-type--empty"></th>
-              <td class="price-list__availability price-list__availability--yes">Розовый фильтр</td>
-              <td class="price-list__availability price-list__availability--yes">Смайлики</td>
+              <th class="price-list__availability price-list__availability--empty">Комментарии</th>
               <td class="price-list__availability price-list__availability--no">Комментарии</td>
-            </tr>
-            <tr class="price-list__row">
-              <th class="price-list__content-type price-list__content-type--empty"></th>
-              <td class="price-list__availability price-list__availability--yes">Розовый фильтр</td>
-              <td class="price-list__availability price-list__availability--yes">Смайлики</td>
+              <td class="price-list__availability price-list__availability--no">Комментарии</td>
               <td class="price-list__availability price-list__availability--yes">Комментарии</td>
             </tr>
-          </table>
-          <div class="price__toggles">
-            <button class="price__toggle" type="button"><span class="visually-hidden">1</span></button>
-            <button class="price__toggle price__toggle--current" type="button"><span
-                class="visually-hidden">2</span></button>
-            <button class="price__toggle" type="button"><span class="visually-hidden">3</span></button>
-          </div>
+          </tbody>
+        </table>
+        <div class="price__toggles">
+          <button class="price__toggle" type="button"><span class="visually-hidden">1</span></button>
+          <button class="price__toggle price__toggle--current" type="button"><span
+              class="visually-hidden">2</span></button>
+          <button class="price__toggle" type="button"><span class="visually-hidden">3</span></button>
+        </div>
       </div>
     </section>
     <section class="contacts">
@@ -169,21 +203,23 @@
           <span class="contacts__title-text">Остались вопросы?</span>
           <span class="contacts__title-text">Свяжитесь с нами!</span>
         </h2>
-        <div class="contacts__phone-block">
-          <h3 class="contacts__subtitle">Звоните</h3>
-          <a class="contacts__info" href="tel: +7 (812) 555-66-66">+7 (812) 555-66-66</a>
-        </div>
-        <div class="contacts__mail-block">
-          <h3 class="contacts__subtitle">Пишите</h3>
-          <a class="contacts__info" href="mailto:vlad@htmlbook.ru">mail@htmlacademy.ru</a>
-        </div>
-        <div class="contacts__address-block">
-          <h3 class="contacts__subtitle">Приезжайте в гости</h3>
-          <address class="contacts__info">ул. Большая Конюшенная, 19/8</address>
-        </div>
+        <ul class="contacts__list">
+          <li class="contacts__item contacts__item--phone">
+            <h3 class="contacts__subtitle">Звоните:</h3>
+            <a class="contacts__info" href="tel: +7 (812) 555-66-66">+7 (812) 555-66-66</a>
+          </li>
+          <li class="contacts__item contacts__item--email">
+            <h3 class="contacts__subtitle">Пишите:</h3>
+            <a class="contacts__info" href="mailto:vlad@htmlbook.ru">mail@htmlacademy.ru</a>
+          </li>
+          <li class="contacts__item contacts__item--address">
+            <h3 class="contacts__subtitle">Приезжайте в гости:</h3>
+            <address class="contacts__info">ул. Большая Конюшенная, 19/8</address>
+          </li>
+        </ul>
       </div>
     </section>
-    <section class="map">
+    <section class="map" id="map">
     </section>
   </main>
   <footer class="page-footer">
@@ -237,6 +273,7 @@
       </div>
     </div>
   </footer>
+  <script src="js/script.js"></script>
 </body>
 
 </html>

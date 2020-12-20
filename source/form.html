@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
 
 <head>
   <meta charset="utf-8">
@@ -9,7 +9,7 @@
 </head>
 
 <body class="page__body">
-  <header class="page-header ">
+  <header class="page__page-header page-header">
     <div class="page-header__wrapper">
       <div class="page-header__logo-block">
         <a href="index.html" class="page-header__logo">
@@ -39,18 +39,21 @@
   </header>
   <main>
     <section class="contest">
-      <div class="contest__wrapper">
-        <div class="contest__title-block">
+      <div class="contest__title-block">
+        <div class="contest__wrapper">
           <h1 class="contest__title">Конкурс на самое безбашенное путешествие с Пинк</h1>
         </div>
+      </div>
+      <div class="contest__wrapper">
         <h2 class="visually-hidden">Заполните форму</h2>
         <p class="contest__intro-text">
           Поделитесь своей историей и получите
           шанс выиграть ценный приз — 1000
           миль на вашу бонусную карту!
+          <span>Пожалуйста, заполните форму ниже:</span>
         </p>
       </div>
-      <form class="contest_form form" action="https://echo.htmlacademy.ru" method="post">
+      <form class="contest__form form" action="https://echo.htmlacademy.ru" method="post">
         <div class="form__wrapper">
           <div class="form__fieldset form__fieldset--info">
             <h3 class="visually-hidden">Ваши данные</h3>
@@ -92,7 +95,7 @@
                 <label for="souvenirs" class="checkbox-field__label">Накупил сувениров</label>
               </li>
               <li class="form__fieldset-item checkbox-field">
-                <input class="checkbox-field__input visually-hidden" type="checkbox" name="tower" id="tower">
+                <input class="checkbox-field__input visually-hidden" type="checkbox" name="tower" id="tower" checked>
                 <label for="tower" class="checkbox-field__label">Удержал башню</label>
               </li>
               <li class="form__fieldset-item checkbox-field">
@@ -102,16 +105,17 @@
             </ul>
           </div>
           <div class="form__fieldset form__fieldset--contacts">
-            <h3 class="visually-hidden">Контактные данные</h3>
+            <h3 class="form__fieldset-title">Контактактная информация</h3>
             <ul class="form__fieldset-list">
-              <li class="form__fieldset-item text-field">
-                <label class="text-field__label">Номер телефона</label>
-                <input class="text-field__input" type="tel" name="tel" id="tel" placeholder="Номер, пожалуйста">
+              <li class="form__fieldset-item text-field text-field--contacts text-field--tel">
+                <label class="text-field__label text-field__label--contacts">Номер телефона</label>
+                <input class="text-field__input text-field__input--contacts" type="tel" name="tel" id="tel"
+                  placeholder="Номер, пожалуйста">
               </li>
-              <li class="form__fieldset-item text-field">
-                <label for="email" class="text-field__label">Адрес почты</label>
-                <input class="text-field__input" type="email" name="email" id="email" placeholder="Введите почту *"
-                  required>
+              <li class="form__fieldset-item text-field text-field--contacts text-field--mail">
+                <label for="email" class="text-field__label text-field__label--contacts">Адрес почты</label>
+                <input class="text-field__input text-field__input--contacts" type="email" name="email" id="email"
+                  placeholder="Введите почту *" required>
               </li>
             </ul>
           </div>
@@ -134,8 +138,8 @@
           </div>
           <div class="form__fieldset form__fieldset--comment">
             <h3 class="form__fieldset-title">Опишите свои эмоции</h3>
-            <div class="form__fiedset-item text-field">
-              <label class="visually_hidden">Оставьте комментарий</label>
+            <div class="form__fieldset-item text-field">
+              <label class="visually-hidden">Оставьте комментарий</label>
               <textarea class="text-field__input text-field__input--comment" name="comment" id="comment"
                 placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
             </div>
@@ -198,6 +202,24 @@
       </div>
     </div>
   </footer>
+  <section class="modal modal--failure">
+    <h2 class="modal__title">Что-то пошло не&nbsp;так!</h2>
+    <p class="modal__text">Проверьте поля, выделенные
+      красным, скорее&nbsp;всего вы забыли
+      их заполнить
+    </p>
+    <button class="modal__button" type="button">Ок</button>
+  </section>
+  <section class="modal modal--success">
+    <h2 class="modal__title">Ваша заявка отправлена</h2>
+    <p class="modal__text">Спасибо за ваше участие, ваша
+      заявка уже поступила к нам. В
+      ближайшее время мы рассмотрим
+      ее и оповестим вас.
+    </p>
+    <button class="modal__button" type="button">Закрыть Окно</button>
+  </section>
+  <script src="js/script.js"></script>
 </body>
 
 </html>

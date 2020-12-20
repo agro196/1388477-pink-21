@@ -1,5 +1,42 @@
 .radio-field__label {
+  position: relative;
   font-size: 18px;
   line-height: 30px;
   color: $blue-grey;
+  padding-left: 55px;
+
+  &::before {
+    content: "";
+    width: 37px;
+    height: 37px;
+    border: 2px solid $light_grey;
+    background-color: $basic_white;
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    padding: 11px;
+  }
+
+  &::after {
+    content: "";
+    display: none;
+    width: 15px;
+    height: 15px;
+    background-color: $basic_pink;
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 11px;
+  }
+}
+
+.radio-field__input:checked ~ .radio-field__label::after {
+  display: block;
+}
+
+.radio-field__input:focus ~ .radio-field__label::before {
+  outline: -webkit-focus-ring-color auto 1px;
 }
