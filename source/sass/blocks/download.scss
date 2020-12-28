@@ -50,8 +50,8 @@
 
 .download__title {
   margin: 0;
-  margin-bottom: 34px;
-  padding-top: 84px;
+  margin-bottom: 30px;
+  padding-top: 88px;
   font-size: 24px;
   line-height: 29px;
   color: $basic_white;
@@ -62,12 +62,15 @@
     font-size: 40px;
     line-height: 48px;
     max-width: 266px;
-    padding-left: 27px;
+    padding-left: 34px;
+    padding-top: 203px;
   }
 
   @media (min-width: $desktop-width) {
     font-size: 50px;
     line-height: 68px;
+    padding-top: 209px;
+    margin-bottom: 37px;
   }
 }
 
@@ -81,12 +84,15 @@
     height: 545px;
     position: absolute;
     z-index: -1;
-    right: -100px;
+    right: 20px;
+    bottom: 0;
   }
 
   @media (min-width: $desktop-width) {
     width: 1050px;
     height: 645px;
+    max-width: none;
+    right: -96px;
   }
 }
 
@@ -107,26 +113,54 @@
   flex-wrap: wrap;
   align-items: center;
   padding-top: 28px;
-  padding-bottom: 38px;
+  padding-bottom: 31px;
 
   @media (min-width: $tablet-width) {
     max-width: 300px;
+    padding-top: 0;
+    padding-bottom: 114px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 125px;
   }
 }
 
 .download__list {
   margin: 0;
   margin-top: 32px;
-  margin-bottom: 32px;
+  margin-bottom: 21px;
   padding: 0;
   list-style: none;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 46px;
+    margin-bottom: 32px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 67px;
+    margin-bottom: 52px;
+  }
 }
 
 .download__item:not(:last-child) {
   margin-right: 35px;
+}
+
+.download__item:nth-child(3) {
+  padding-top: 8px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 8px;
+  }
 }
 
 .download__link--apple {

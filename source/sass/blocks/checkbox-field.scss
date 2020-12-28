@@ -1,14 +1,39 @@
 .checkbox-field {
   @media (min-width: $desktop-width) {
-    width: 33.3%;
+    width: 268px;
+  }
+}
+
+.checkbox-field:nth-child(1),
+.checkbox-field:nth-child(2) {
+  @media (min-width: $desktop-width) {
+    width: 287px;
+  }
+}
+
+.checkbox-field:nth-child(3n + 7) {
+  @media (min-width: $desktop-width) {
+    width: 287px;
   }
 }
 
 .checkbox-field__label {
+  padding-bottom: 34px;
+  display: block;
+  font-size: 18px;
+  line-height: 30px;
+  color: $blue-grey;
+  position: relative;
+  padding-left: 57px;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 59px;
+  }
+
   &::before {
     content: "";
     position: absolute;
-    top: 50%;
+    top: 24%;
     transform: translateY(-50%);
     left: 0;
     width: 35px;
@@ -16,25 +41,21 @@
     border: 2px solid $light_grey;
     background-color: $basic_white;
     border-radius: 1px;
+    box-sizing: content-box;
   }
 
   &::after {
     content: "";
     display: none;
     position: absolute;
-    width: 16px;
+    width: 21px;
     height: 10px;
-    top: 50%;
-    left: 8px;
-    border-left: 2px solid $basic_pink;
-    border-bottom: 2px solid $basic_pink;
-    transform: skewY(-5deg) rotate(-45deg) translateY(-50%);
+    top: 17%;
+    left: 13px;
+    border-left: 2px solid #d22856;
+    border-bottom: 2px solid #d22856;
+    transform: rotate(-45deg) translateY(-50%);
   }
-  font-size: 18px;
-  line-height: 30px;
-  color: $blue-grey;
-  position: relative;
-  padding-left: 57px;
 }
 
 .checkbox-field__input:checked ~ .checkbox-field__label::after {

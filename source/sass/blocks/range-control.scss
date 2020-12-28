@@ -7,12 +7,18 @@
 }
 
 .range-control__icon {
+  position: absolute;
+  top: -8px;
+  left: 4px;
+
+  @media (min-width: $desktop-width) {
+    top: -21px;
+    left: 0;
+  }
+
   @media (max-width: $mobile-width-only) {
     display: none;
   }
-  position: absolute;
-  top: -10px;
-  left: 0;
 }
 
 .range-control__icon--crop {
@@ -41,6 +47,8 @@
   @media (min-width: $desktop-width) {
     width: 32px;
     height: 32px;
+    top: -15px;
+    left: 6px;
   }
 }
 
@@ -60,10 +68,12 @@
 
   @media (min-width: $tablet-width) {
     width: 202px;
+    transform: translateX(18px);
   }
 
   @media (min-width: $desktop-width) {
     width: 288px;
+    transform: translateX(31px);
   }
 }
 
@@ -74,11 +84,23 @@
   border: 2px solid $basic_pink;
   border-radius: 50%;
   position: absolute;
-  top: -6px;
+  top: -5px;
+
+  @media (min-width: $desktop-width) {
+    top: -6px;
+  }
 }
 
 .range-control--crop .range-control__toggle {
-  right: 40px;
+  right: 33px;
+
+  @media (min-width: $tablet-width) {
+    right: 42px;
+  }
+
+  @media (min-width: $desktop-width) {
+    right: 205px;
+  }
 }
 
 .range-control--fill,
@@ -91,9 +113,17 @@
 }
 
 .range-control--fill .range-control__toggle {
-  right: 200px;
+  right: 163px;
+
+  @media (min-width: $desktop-width) {
+    right: 27px;
+  }
 }
 
 .range-control--contrast .range-control__toggle {
-  right: 115px;
+  right: 92px;
+
+  @media (min-width: $desktop-width) {
+    right: 114px;
+  }
 }
