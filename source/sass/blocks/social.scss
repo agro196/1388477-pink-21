@@ -4,14 +4,27 @@
   list-style-type: none;
   display: flex;
   justify-content: center;
+
+  @media (min-width: $tablet-width) {
+    padding-right: 15px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 0;
+    padding-left: 9px;
+  }
+}
+
+.social__item:not(:last-child) {
+  margin-right: 14px;
 }
 
 .social__link {
   display: flex;
   width: 48px;
   height: 48px;
-  border: 3px solid rgba($color: $blue_grey, $alpha: 0.1);
   border-radius: 50%;
   align-items: center;
   justify-content: center;
+  box-shadow: 0 0 0 3px rgba($color: $blue_grey, $alpha: 0.1);
 }

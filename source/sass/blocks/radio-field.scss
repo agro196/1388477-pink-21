@@ -3,17 +3,23 @@
   font-size: 18px;
   line-height: 30px;
   color: $blue-grey;
-  padding-left: 55px;
+  padding-left: 70px;
+  padding-bottom: 27px;
+  display: block;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 61px;
+  }
 
   &::before {
     content: "";
-    width: 37px;
-    height: 37px;
+    width: 41px;
+    height: 41px;
     border: 2px solid $light_grey;
     background-color: $basic_white;
     position: absolute;
     border-radius: 50%;
-    top: 50%;
+    top: 28%;
     transform: translateY(-50%);
     left: 0;
     padding: 11px;
@@ -27,9 +33,9 @@
     background-color: $basic_pink;
     position: absolute;
     border-radius: 50%;
-    top: 50%;
+    top: 28%;
     transform: translateY(-50%);
-    left: 11px;
+    left: 13px;
   }
 }
 

@@ -6,6 +6,7 @@
 
   @media (min-width: $desktop-width) {
     display: flex;
+    flex-wrap: wrap;
     background-color: transparent;
   }
 }
@@ -20,6 +21,7 @@
   @media (min-width: $desktop-width) {
     border-bottom: none;
     margin-left: 79px;
+    padding-top: 37px;
   }
 }
 
@@ -33,5 +35,18 @@
   @media (min-width: $desktop-width) {
     text-transform: none;
     font-weight: 400;
+  }
+}
+
+.site-list__link--active {
+  @media (min-width: $desktop-width) {
+    border-bottom: 2px solid $basic_white;
+    padding-bottom: 8px;
+  }
+}
+
+.site-list__link--academy {
+  @media (max-width: $tablet-width-only) {
+    text-transform: uppercase;
   }
 }

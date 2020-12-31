@@ -1,8 +1,29 @@
 .price {
-  background-image: url("../img/grey-background.svg");
-  background-repeat: no-repeat;
-  background-size: 8000px 1000px;
-  background-position: 50% 100px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 93%;
+    background-color: $basic_grey;
+    z-index: -1;
+    bottom: 0;
+    clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 0% 4%);
+
+    @media (min-width: $tablet-width) {
+      height: 96.5%;
+      clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 0% 10.5%);
+      top: auto;
+      bottom: 0;
+    }
+
+    @media (min-width: $desktop-width) {
+      height: 94%;
+      clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 0% 19%);
+    }
+  }
 }
 
 .price__wrapper {
@@ -10,10 +31,27 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 138px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 68px;
+    padding-top: 112px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 192px;
+    padding-bottom: 96px;
+  }
 }
 
 .price__toggles {
   text-align: center;
+  padding-top: 35px;
+  padding-bottom: 46px;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 }
 
 .price__toggle {
@@ -27,7 +65,7 @@
 }
 
 .price__toggle:not(:last-child) {
-  margin-right: 10px;
+  margin-right: 15px;
 }
 
 .price__toggle--current {

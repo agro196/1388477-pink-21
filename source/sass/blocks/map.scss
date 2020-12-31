@@ -16,9 +16,19 @@
     right: 0;
     width: 100%;
     z-index: 1;
-    height: 69px;
-    background-size: 100% 69px;
+    height: 33px;
+    background-size: 100% 33px;
     background-position: top center;
+
+    @media (min-width: $tablet-width) {
+      height: 68px;
+      background-size: 100% 68px;
+    }
+
+    @media (min-width: $desktop-width) {
+      height: 100px;
+      background-size: 100% 100px;
+    }
   }
 
   @media (min-resolution: 2dppx) {

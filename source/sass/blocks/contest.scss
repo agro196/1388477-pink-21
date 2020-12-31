@@ -6,13 +6,17 @@
   background-color: $blue_grey;
   background-image: url("../img/back-mobile.png");
   background-repeat: no-repeat;
-  min-height: 171px;
+  padding-top: 96px;
+  padding-bottom: 45px;
+  background-size: 100%;
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/back-mobile@2x.png");
   }
 
   @media (min-width: $tablet-width) {
+    padding-top: 176px;
+    padding-bottom: 59px;
     background-image: url("../img/back-tablet.png");
     background-size: 1200px 729px;
     background-position: 50% 0%;
@@ -26,6 +30,8 @@
     background-image: url("../img/back-desktop.png");
     background-size: 2560px 853px;
     background-position: 50% 0%;
+    padding-top: 170px;
+    padding-bottom: 88px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/back-desktop@2x.png");
@@ -48,13 +54,26 @@
 }
 
 .contest__intro-text {
+  margin: 0;
   font-size: 14px;
   line-height: 30px;
   text-align: center;
   color: $blue_grey;
+  padding-top: 44px;
+  padding-bottom: 36px;
 
   @media (min-width: $tablet-width) {
     font-size: 18px;
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-top: 91px;
+    padding-bottom: 72px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-bottom: 80px;
   }
 }
 
