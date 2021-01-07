@@ -10,8 +10,7 @@
   @media (min-width: $desktop-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    row-gap: 66px;
-    column-gap: 70px;
+    gap: 66px 70px;
   }
 }
 
@@ -299,6 +298,19 @@
   margin-top: 6px;
   padding-left: 47px;
   padding-right: 47px;
+
+  &:hover {
+    background-color: $darkest_green;
+  }
+
+  &:active {
+    color: rgba($color: $basic_white, $alpha: 0.3);
+  }
+
+  &:disabled {
+    color: $basic_white;
+    background-color: $light_grey;
+  }
 
   @media (min-width: $tablet-width) {
     padding-left: 57px;

@@ -44,5 +44,13 @@
 }
 
 .radio-field__input:focus ~ .radio-field__label::before {
-  outline: -webkit-focus-ring-color auto 1px;
+  outline: auto 1px;
+}
+
+.radio-field__input:hover ~ .radio-field__label::before {
+  border-color: $blue_grey;
+}
+
+.radio-field__input:active ~ .radio-field__label::before {
+  border-color: $basic_pink;
 }

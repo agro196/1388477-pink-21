@@ -24,9 +24,32 @@
   }
 }
 
-.page-footer__logo img {
+.page-footer__logo-img {
+  fill: $blue_grey;
+
+  &:hover {
+    fill: $basic_pink;
+  }
+
+  &:active {
+    opacity: 0.3;
+    fill: $blue_grey;
+  }
+
   @media (min-width: $desktop-width) {
     width: 147px;
+  }
+}
+
+.page-footer__logo-img--tablet {
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
+.page-footer__logo-img--desktop {
+  @media (max-width: $tablet-width-only) {
+    display: none;
   }
 }
 

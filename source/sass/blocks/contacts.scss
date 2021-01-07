@@ -56,6 +56,18 @@
   }
 }
 
+.contacts__item--email .contacts__info {
+  &:hover {
+    color: $blue_grey;
+    text-decoration: underline;
+  }
+
+  &:active {
+    color: rgba($color: $blue_grey, $alpha: 0.3);
+    text-decoration: none;
+  }
+}
+
 .contacts__title {
   margin: 0;
   margin-bottom: 35px;

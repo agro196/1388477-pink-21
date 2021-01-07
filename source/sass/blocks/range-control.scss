@@ -10,6 +10,7 @@
   position: absolute;
   top: -8px;
   left: 4px;
+  fill: $basic_pink;
 
   @media (min-width: $desktop-width) {
     top: -21px;
@@ -28,19 +29,12 @@
   }
 }
 
-.range-control__icon--fill path {
-  fill: $basic_pink;
-}
 
 .range-control__icon--fill {
   @media (min-width: $desktop-width) {
     width: 48px;
     height: 43px;
   }
-}
-
-.range-control__icon--fill g {
-  opacity: 1;
 }
 
 .range-control__icon--contrast {
@@ -50,14 +44,6 @@
     top: -15px;
     left: 6px;
   }
-}
-
-.range-control__icon--contrast path {
-  fill: $basic_pink;
-}
-
-.range-control__icon--contrast g {
-  opacity: 1;
 }
 
 .range-control__bar {
@@ -88,6 +74,11 @@
 
   @media (min-width: $desktop-width) {
     top: -6px;
+  }
+
+  &:active {
+    background-color: $basic_pink;
+    outline: none;
   }
 }
 

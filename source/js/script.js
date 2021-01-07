@@ -70,12 +70,12 @@ function showSlides (n) {
         slideIndex = 1;
     }
     for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = 'none';
+        slides[i].classList.remove('slider__item--current');
     }
     for (let i = 0; i < sliderDots.length; i++) {
         sliderDots[i].classList.remove('slider__toggle--current');
     }
-    slides[slideIndex - 1].style.display = 'block';
+    slides[slideIndex - 1].classList.add('slider__item--current');
     sliderDots[slideIndex - 1].classList.add('slider__toggle--current');
 }
 

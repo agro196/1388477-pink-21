@@ -38,6 +38,20 @@
   }
 }
 
+.site-list__link[href] {
+  &:hover {
+    color: $basic_pink;
+  }
+
+  &:active {
+    color: rgba($color: $basic_pink, $alpha: 0.3);
+
+    @media (min-width: $desktop-width) {
+      color: rgba($color: $basic_white, $alpha: 0.3);
+    }
+  }
+}
+
 .site-list__link--active {
   @media (min-width: $desktop-width) {
     border-bottom: 2px solid $basic_white;

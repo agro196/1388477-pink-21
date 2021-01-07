@@ -59,7 +59,7 @@
 
 .upload-form__filter-controls {
   margin-top: 43px;
-  margin-bottom: 39px;
+  margin-bottom: 36px;
 
   @media (min-width: $tablet-width) {
     margin-top: 0;
@@ -123,6 +123,16 @@
   border: 3px solid;
   border-color: $basic_pink;
 
+  &:hover {
+    color: $basic_white;
+    background-color: $basic_pink;
+  }
+
+  &:active {
+    background-color: $basic_pink;
+    color: rgba($color: $basic_white, $alpha: 0.3);
+  }
+
   @media (min-width: $tablet-width) {
     width: 260px;
     margin-top: 0;
@@ -142,6 +152,18 @@
   color: rgba($color: $blue_grey, $alpha: 0.1);
   border: 3px solid;
   border-color: rgba($color: $blue_grey, $alpha: 0.1);
+
+  &:hover {
+    color: rgba($color: $blue_grey, $alpha: 0.3);
+    border-color: rgba($color: $blue_grey, $alpha: 0.3);
+  }
+
+  &:active {
+    opacity: 0.3;
+    color: rgba($color: $basic_white, $alpha: 0.3);
+    border-color: $blue_grey;
+    background-color: $blue_grey;
+  }
 
   @media (min-width: $tablet-width) {
     width: 260px;
