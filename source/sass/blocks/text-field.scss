@@ -18,18 +18,18 @@
       content: "";
       display: block;
       position: absolute;
-      width: 61px;
-      height: 61px;
+      width: 59px;
+      height: 59px;
       background-color: $light_grey;
-      top: 0;
-      right: 0;
+      top: 2px;
+      right: 2px;
     }
   }
 }
 
 .text-field--tel {
   &::after {
-    background-image: url("../img/icon-phone.svg");
+    background-image: url("../img/icons/icon-phone.svg");
     background-repeat: no-repeat;
     background-position: 48% 52%;
   }
@@ -37,7 +37,7 @@
 
 .text-field--mail {
   &::after {
-    background-image: url("../img/icon-mail.svg");
+    background-image: url("../img/icons/icon-mail.svg");
     background-repeat: no-repeat;
     background-position: 48% 52%;
   }
@@ -82,11 +82,21 @@
   &::placeholder {
     color: $blue_grey;
   }
+
+  &:hover {
+    border-color: $blue_grey;
+  }
+
+  &:focus {
+    border-color: $basic_pink;
+    outline: none;
+  }
 }
 
 .text-field--contacts .text-field__input {
   @media (min-width: $tablet-width) {
     order: 1;
+    padding-right: 61px;
   }
 }
 

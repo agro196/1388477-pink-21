@@ -105,6 +105,17 @@
   color: $basic_white;
   border: 3px solid;
   border-color: $basic_white;
+
+  &:hover {
+    color: $basic_pink;
+    background-color: $basic_white;
+    box-shadow: 0 5px 7px rgba($color: $basic_black, $alpha: 0.75);
+  }
+
+  &:active {
+    color: rgba($color: $basic_pink, $alpha: 0.3);
+    box-shadow: none;
+  }
 }
 
 .download__link-block {

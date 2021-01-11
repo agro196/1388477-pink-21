@@ -27,4 +27,20 @@
   align-items: center;
   justify-content: center;
   box-shadow: 0 0 0 3px rgba($color: $blue_grey, $alpha: 0.1);
+
+  &:hover {
+    box-shadow: 0 0 0 3px $blue_grey;
+  }
+
+  &:active {
+    box-shadow: 0 0 0 3px rgba($color: $blue_grey, $alpha: 0.1);
+  }
+
+  &:active svg {
+    opacity: 0.3;
+  }
+}
+
+.social__link svg {
+  fill: $basic_pink;
 }

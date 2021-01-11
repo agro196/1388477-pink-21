@@ -85,6 +85,15 @@
     border-bottom: 2px solid rgba($color: $blue_grey, $alpha: 0.3);
     top: 220px;
   }
+
+  &:hover {
+    border-color: rgba($color: $blue_grey, $alpha: 0.6);
+  }
+
+  &:active {
+    border-color: rgba($color: $blue_grey, $alpha: 0.1);
+    outline: none;
+  }
 }
 
 .slider__prev {
@@ -113,13 +122,23 @@
 }
 
 .slider__toggle {
+  cursor: pointer;
   border: 0;
-  background-color: transparentize($blue_grey, 0.7);
+  background-color: rgba($color: $blue_grey, $alpha: 0.3);
   border-radius: 50%;
   width: 6px;
   height: 6px;
   box-sizing: border-box;
   padding: 0;
+
+  &:hover {
+    background-color: rgba($color: $blue_grey, $alpha: 0.6);
+  }
+
+  &:active {
+    background-color: rgba($color: $blue_grey, $alpha: 0.1);
+    outline: none;
+  }
 }
 
 .slider__toggle:not(:last-child) {
@@ -135,4 +154,12 @@
   box-sizing: border-box;
   padding: 0;
   box-shadow: 0 0 0 3px $blue_grey;
+
+  &:hover {
+    background-color: $basic_white;
+  }
+
+  &:active {
+    background-color: $basic_white;
+  }
 }

@@ -35,24 +35,29 @@
   border-left: 2px solid $basic_white;
   position: relative;
 
+  &::after {
+    content: "";
+    background-image: url("../img/hit-flag.svg");
+    width: 74px;
+    height: 74px;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -2px;
+
+    @media (min-width: $tablet-width) {
+      top: -4px;
+      left: -9px;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 0;
+      left: 0;
+    }
+  }
+
   @media (min-width: $tablet-width) {
     overflow: hidden;
-  }
-}
-
-.price-list__hit-flag {
-  position: absolute;
-  top: 0;
-  left: -2px;
-
-  @media (min-width: $tablet-width) {
-    top: -4px;
-    left: -9px;
-  }
-
-  @media (min-width: $desktop-width) {
-    top: 0;
-    left: 0;
   }
 }
 

@@ -14,3 +14,15 @@
     font-size: 18px;
   }
 }
+
+.copyright__link svg {
+  fill: $basic_pink;
+}
+
+.copyright__link:hover svg {
+  fill: $blue_grey;
+}
+
+.copyright__link:active svg {
+  opacity: 0.3;
+}

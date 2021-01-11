@@ -35,6 +35,8 @@
   }
 
   &:active {
+    outline: none;
+
     &::before {
       background-color: rgba($color: $basic_pink, $alpha: 0.3);
       box-shadow: 0 10px 0 0 rgba($color: $basic_pink, $alpha: 0.3), 0 20px 0 0 rgba($color: $basic_pink, $alpha: 0.3);
@@ -81,9 +83,13 @@
     transform: rotate(-45deg);
   }
 
-  &:active::before,
-  &:active::after {
-    background-color: rgba($color: $basic_pink, $alpha: 0.3);
+  &:active {
+    outline: none;
+
+    &::before,
+    &::after {
+      background-color: rgba($color: $basic_pink, $alpha: 0.3);
+    }
   }
 
   &:hover::before,
