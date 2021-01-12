@@ -112,6 +112,8 @@
   font-weight: 300;
   color: $basic_pink;
   text-align: center;
+  transition-property: color;
+  transition-duration: 0.5s;
 
   @media (min-width: $tablet-width) {
     margin-top: 3px;

@@ -6,6 +6,7 @@
   padding-left: 70px;
   padding-bottom: 27px;
   display: block;
+  cursor: pointer;
 
   @media (min-width: $tablet-width) {
     padding-left: 61px;
@@ -23,6 +24,8 @@
     transform: translateY(-50%);
     left: 0;
     padding: 11px;
+    transition-property: border;
+    transition-duration: 0.5s;
   }
 
   &::after {

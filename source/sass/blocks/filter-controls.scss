@@ -10,6 +10,7 @@
   }
 }
 
+
 .filter-controls__input:focus + .filter-controls__label {
   outline: -webkit-focus-ring-color auto 1px;
 }
@@ -22,6 +23,7 @@
 .filter-controls__icon {
   opacity: 0.3;
   fill: $blue_grey;
+  transition-duration: 0.5s;
 
   &:hover {
     opacity: 0.5;

@@ -27,6 +27,7 @@
   align-items: center;
   justify-content: center;
   box-shadow: 0 0 0 3px rgba($color: $blue_grey, $alpha: 0.1);
+  transition-duration: 0.5s;
 
   &:hover {
     box-shadow: 0 0 0 3px $blue_grey;
