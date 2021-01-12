@@ -25,6 +25,16 @@
     height: 4px;
     background-color: $basic_white;
     box-shadow: 0 10px 0 0 $basic_white, 0 20px 0 0 $basic_white;
+    transition-duration: 0.5s;
+  }
+
+  &:focus {
+    outline: none;
+
+    &::before {
+      background-color: $dark_grey;
+      box-shadow: 0 10px 0 0 $dark_grey, 0 20px 0 0 $dark_grey;
+    }
   }
 
   &:hover {
@@ -52,6 +62,20 @@
   .main-nav--nojs .main-nav__toggle {
     display: none;
   }
+
+  .main-nav--opened .main-nav__list {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    animation-name: trans;
+    animation-duration: 1.5s;
+  }
+
+  .main-nav--nojs .main-nav__list {
+    position: static;
+    animation: none;
+  }
 }
 
 .main-nav--opened .main-nav__toggle {
@@ -72,6 +96,7 @@
     width: 29px;
     height: 4px;
     background-color: #ffffff;
+    transition-duration: 0.5s;
   }
 
   &::before {
@@ -83,9 +108,16 @@
     transform: rotate(-45deg);
   }
 
-  &:active {
+  &:focus {
     outline: none;
 
+    &::before,
+    &::after {
+      background-color: $dark_grey;
+    }
+  }
+
+  &:active {
     &::before,
     &::after {
       background-color: rgba($color: $basic_pink, $alpha: 0.3);

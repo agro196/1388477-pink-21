@@ -84,6 +84,12 @@
     height: 28px;
     border-bottom: 2px solid rgba($color: $blue_grey, $alpha: 0.3);
     top: 220px;
+    transition-duration: 0.5s;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: $dark_grey;
   }
 
   &:hover {
@@ -130,6 +136,7 @@
   height: 6px;
   box-sizing: border-box;
   padding: 0;
+  transition-duration: 0.5s;
 
   &:hover {
     background-color: rgba($color: $blue_grey, $alpha: 0.6);

@@ -26,6 +26,7 @@
 
 .page-footer__logo-img {
   fill: $blue_grey;
+  transition-duration: 0.5s;
 
   &:hover {
     fill: $basic_pink;

@@ -71,12 +71,14 @@
   border-radius: 50%;
   position: absolute;
   top: -5px;
+  transition-duration: 0.5s;
+  transition-property: background-color;
 
   @media (min-width: $desktop-width) {
     top: -6px;
   }
 
-  &:active {
+  &:focus {
     background-color: $basic_pink;
     outline: none;
   }

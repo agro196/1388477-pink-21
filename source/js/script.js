@@ -2,13 +2,12 @@
 
 const navMain = document.querySelector('.main-nav')
 const navToggle = document.querySelector('.main-nav__toggle')
-const logoBlock = document.querySelector ('.page-header__logo-block')
+const logoBlock = document.querySelector('.page-header__logo-block')
 
-navMain.classList.remove('main-nav--nojs');
-navMain.classList.remove('main-nav--opened');
+navMain.classList.remove('main-nav--nojs')
+navMain.classList.remove('main-nav--opened')
 navMain.classList.add('main-nav--closed')
 logoBlock.classList.add('page-header__logo-block--transparent')
-
 
 navToggle.addEventListener('click', function () {
   logoBlock.classList.toggle('page-header__logo-block--transparent')
@@ -48,54 +47,53 @@ function init() {
       // Смещение слоя с содержимым относительно слоя с картинкой.
     },
   )
-
   myMap.geoObjects.add(myPlacemarkWithContent)
 }
 
 //Слайдер отзывов
 
 let sliderDots = document.getElementsByClassName('slider__toggle'),
-    sliderDotsArea = document.querySelector('.slider__toggles'),
-    slides = document.getElementsByClassName('slider__item'),
-    prev = document.querySelector('.slider__prev'),
-    next = document.querySelector('.slider__next'),
-    slideIndex = 1;
+  sliderDotsArea = document.querySelector('.slider__toggles'),
+  slides = document.getElementsByClassName('slider__item'),
+  prev = document.querySelector('.slider__prev'),
+  next = document.querySelector('.slider__next'),
+  slideIndex = 1
 
-showSlides(slideIndex);
-
-function showSlides (n) {
-    if (n < 1) {
-        slideIndex = slides.length;
-    } else if (n > slides.length) {
-        slideIndex = 1;
+showSlides(slideIndex)
+function showSlides(n) {
+  if (n < 1) {
+    slideIndex = slides.length
+  } else if (n > slides.length) {
+    slideIndex = 1
+  }
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].classList.remove('slider__item--current')
+  }
+  for (let i = 0; i < sliderDots.length; i++) {
+    sliderDots[i].classList.remove('slider__toggle--current')
+  }
+  slides[slideIndex - 1].classList.add('slider__item--current')
+  sliderDots[slideIndex - 1].classList.add('slider__toggle--current')
+}
+function plusSlides(n) {
+  showSlides((slideIndex += n))
+}
+function currentSlide(n) {
+  showSlides((slideIndex = n))
+}
+prev.addEventListener('click', function () {
+  plusSlides(-1)
+})
+next.addEventListener('click', function () {
+  plusSlides(1)
+})
+sliderDotsArea.addEventListener('click', function (e) {
+  for (let i = 0; i < sliderDots.length + 1; i++) {
+    if (
+      e.target.classList.contains('slider__toggle') &&
+      e.target == sliderDots[i - 1]
+    ) {
+      currentSlide(i)
     }
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].classList.remove('slider__item--current');
-    }
-    for (let i = 0; i < sliderDots.length; i++) {
-        sliderDots[i].classList.remove('slider__toggle--current');
-    }
-    slides[slideIndex - 1].classList.add('slider__item--current');
-    sliderDots[slideIndex - 1].classList.add('slider__toggle--current');
-}
-
-function plusSlides (n) {
-    showSlides(slideIndex += n);
-}
-function currentSlide (n) {
-    showSlides(slideIndex = n)
-}
-
-prev.onclick = function () {
-    plusSlides(-1);
-}
-next.onclick = function () {
-    plusSlides(1);
-}
-sliderDotsArea.onclick = function (e) {
-    for (let i = 0; i < sliderDots.length + 1; i++) {
-        if (e.target.classList.contains('slider__toggle') && e.target == sliderDots[i - 1]) {
-            currentSlide(i);
-        }
-    }
-}
+  }
+})

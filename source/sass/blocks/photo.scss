@@ -163,6 +163,7 @@
   height: 12px;
   background-image: url("../img/icons/icon-heart.svg");
   background-repeat: no-repeat;
+  cursor: pointer;
 
   @media (min-width: $tablet-width) {
     order: 2;

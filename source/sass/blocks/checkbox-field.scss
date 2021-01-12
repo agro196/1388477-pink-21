@@ -25,6 +25,7 @@
   color: $blue-grey;
   position: relative;
   padding-left: 57px;
+  cursor: pointer;
 
   @media (min-width: $tablet-width) {
     padding-left: 59px;
@@ -41,6 +42,8 @@
     border: 2px solid $light_grey;
     background-color: $basic_white;
     border-radius: 1px;
+    transition-property: border;
+    transition-duration: 0.5s;
   }
 
   &::after {
