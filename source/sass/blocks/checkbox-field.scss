@@ -65,7 +65,7 @@
 }
 
 .checkbox-field__input:focus ~ .checkbox-field__label::before {
-  outline: auto 1px;
+  border-color: $basic_black;
 }
 
 .checkbox-field__input:hover ~ .checkbox-field__label::before {
