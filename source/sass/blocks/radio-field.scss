@@ -47,7 +47,7 @@
 }
 
 .radio-field__input:focus ~ .radio-field__label::before {
-  outline: auto 1px;
+  border-color: $basic_black;
 }
 
 .radio-field__input:hover ~ .radio-field__label::before {
