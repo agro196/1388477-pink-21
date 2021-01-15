@@ -84,6 +84,11 @@
     color: $blue_grey;
   }
 
+  &::-moz-placeholder {
+    color: $blue_grey;
+    opacity: 1;
+  }
+
   &:hover {
     border-color: $blue_grey;
   }

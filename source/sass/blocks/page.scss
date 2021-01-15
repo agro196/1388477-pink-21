@@ -23,4 +23,13 @@
     bottom: $header-shift;
     margin-top: $header-shift;
   }
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: auto;
+    margin-top: 0;
+  }
 }
