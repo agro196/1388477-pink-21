@@ -5,8 +5,8 @@
   background-color: $blue_grey;
 
   @media (min-width: $desktop-width) {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 150px 188px 150px 150px;
     background-color: transparent;
   }
 }
@@ -25,8 +25,9 @@
   @media (min-width: $desktop-width) {
     border-bottom: none;
     border-top: none;
-    margin-left: 79px;
     padding-top: 37px;
+    padding-right: 19px;
+    text-align: left;
   }
 }
 

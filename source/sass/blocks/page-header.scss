@@ -27,6 +27,7 @@
     background-color: transparent;
     padding-right: 0;
     padding-left: 0;
+    margin-right: 172px;
   }
 }
 
@@ -94,5 +95,11 @@
 .page-header__logo-img--desktop {
   @media (max-width: $tablet-width-only) {
     display: none;
+  }
+}
+
+.page-header__main-nav {
+  @media (min-width: $desktop-width) {
+    flex-grow: 1;
   }
 }
