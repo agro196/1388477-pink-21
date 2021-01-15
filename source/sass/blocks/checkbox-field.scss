@@ -1,22 +1,3 @@
-.checkbox-field {
-  @media (min-width: $desktop-width) {
-    width: 268px;
-  }
-}
-
-.checkbox-field:nth-child(1),
-.checkbox-field:nth-child(2) {
-  @media (min-width: $desktop-width) {
-    width: 287px;
-  }
-}
-
-.checkbox-field:nth-child(3n + 7) {
-  @media (min-width: $desktop-width) {
-    width: 287px;
-  }
-}
-
 .checkbox-field__label {
   padding-bottom: 34px;
   display: block;
@@ -34,8 +15,7 @@
   &::before {
     content: "";
     position: absolute;
-    top: 24%;
-    transform: translateY(-50%);
+    top: -5px;
     left: 0;
     width: 39px;
     height: 39px;
@@ -52,11 +32,11 @@
     position: absolute;
     width: 21px;
     height: 10px;
-    top: 17%;
-    left: 13px;
+    top: 7px;
+    left: 9px;
     border-left: 2px solid $basic_pink;
     border-bottom: 2px solid $basic_pink;
-    transform: rotate(-45deg) translateY(-50%);
+    transform: rotate(-45deg);
   }
 }
 

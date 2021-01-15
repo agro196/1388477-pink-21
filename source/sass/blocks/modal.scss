@@ -3,6 +3,10 @@
   padding: 49px 75px 52px 75px;
   box-shadow: 0 7px 15px rgba($color: $basic_black, $alpha: 0.15);
   border-radius: 5px;
+  background-color: $basic_white;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   display: none;
 
   @media (min-width: $desktop-width) {
@@ -13,13 +17,27 @@
 
 
 .modal--failure {
+  @media (min-width: $tablet-width) {
+    top: 103%;
+  }
+
   @media (min-width: $desktop-width) {
     background-image: linear-gradient(to top, $basic_grey 163px, $basic_white 163px);
+    top: 94%;
   }
 }
 
 .modal--success {
   background-image: linear-gradient(to top, $basic_grey 163px, $basic_white 163px);
+
+  @media (min-width: $tablet-width) {
+    top: 158%;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-image: linear-gradient(to top, $basic_grey 163px, $basic_white 163px);
+    top: 146%;
+  }
 }
 
 .modal__title {
